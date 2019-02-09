@@ -1,4 +1,6 @@
 #!/bin/bash
+# TODO: Take in rec dir++ from env vars
+# TODO: use adelay filter to sync video and audio
 bmdcapture -m 6 -A 2 -V 4 -F nut -f pipe:1 | \
 ffmpeg -nostats -nostdin -y \
 	-i - \
