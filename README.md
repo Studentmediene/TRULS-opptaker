@@ -17,7 +17,7 @@ sudo ln -s /srv/TRULS-opptaker/nyesnattsending /usr/local/bin/nyesnattsending
 sudo ln -s /srv/TRULS-opptaker/slettopptak /usr/local/bin/slettopptak
 sudo cp nyes-nattsending.service video-opptaker.service slett-opptak.{timer,service} /etc/systemd/system
 sudo systemctl daemon-reload
-sudo systemctl enable --start video-opptaker slett-opptak.timer
+sudo systemctl enable --now video-opptaker slett-opptak.timer
 ```
 
 Ved oppdatering av `video-opptaker.service`, `nyes-nattsending.service`,
