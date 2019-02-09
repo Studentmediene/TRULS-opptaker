@@ -1,0 +1,7 @@
+[Unit]
+Description=Slett gamle videoopptak
+
+[Service]
+Type=simple
+User=opptaker
+ExecStart=/usr/local/bin/slettopptak

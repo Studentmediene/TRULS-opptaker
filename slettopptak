@@ -1,0 +1,15 @@
+#!/bin/bash
+(( hours_to_keep=24 ))
+(( minutes_to_keep=60*$hours_to_keep ))
+
+find /opptak \
+	-maxdepth 2 \
+	-depth \
+	\( \
+		-mmin +$minutes_to_keep \
+		-name videoopptak\*.avi \
+	-o \
+		-empty \
+	\) \
+	-delete \
+	-print
