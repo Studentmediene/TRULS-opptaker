@@ -3,13 +3,18 @@ bmdcapture -m 6 -A 2 -V 4 -F nut -f pipe:1 | \
 ffmpeg -nostats -nostdin -y \
 	-i - \
 	-vf setsar=sar=1/1 \
+		-f segment \
+		-segment_time 3600 \
+		-segment_atclocktime 1 \
+		-strftime 1 \
+		-reset_timestamps 1 \
 		-c:v mpeg4 \
 		-vtag xvid \
 		-qscale:v 7 \
 		-af "pan=mono|c0=c0" \
 		-c:a libmp3lame \
 		-qscale:a 5 \
-		`date "+/var/www/opptak/videoopptak_%F_%H:%M:%S.avi"`\
+		"/opptak/videoopptak_%F_%H:%M:%S.avi" \
 	-vf setsar=sar=1/1 \
 		-c:v libx264 \
 		-preset fast \
