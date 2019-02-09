@@ -1,0 +1,9 @@
+[Unit]
+Description=Videoopptaker for automatisk opptak
+
+[Service]
+Type=simple
+User=opptaker
+ExecStart=/usr/local/bin/videoopptaker
+Restart=always
+

@@ -1,0 +1,9 @@
+[Unit]
+Description=Stream nyes nattsending på rtmp://nsa.smint.no/internt/live
+
+[Service]
+Type=simple
+User=opptaker
+ExecStart=/usr/local/bin/nyesnattsending
+Restart=always
+
