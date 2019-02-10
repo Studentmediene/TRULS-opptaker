@@ -30,4 +30,4 @@ ffmpeg -nostats -nostdin -y \
 		-ar 44100 \
 		-threads 0 \
 		-f flv \
-		"rtmp://localhost/auto/live"
+		"rtmp://localhost/internt/live"
