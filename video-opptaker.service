@@ -7,3 +7,5 @@ User=opptaker
 ExecStart=/usr/local/bin/videoopptaker
 Restart=always
 
+[Install]
+WantedBy=multi-user.target
