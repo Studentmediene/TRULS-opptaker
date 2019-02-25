@@ -1,5 +1,7 @@
 [Unit]
 Description=Videoopptaker for automatisk opptak
+Requires=nginx.service
+After=nginx.service
 
 [Service]
 Type=simple
