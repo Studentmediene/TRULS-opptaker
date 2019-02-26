@@ -11,10 +11,10 @@ ffmpeg -nostats -nostdin -y \
 		-reset_timestamps 1 \
 		-c:v mpeg4 \
 		-vtag xvid \
-		-qscale:v 7 \
+		-qscale:v 5 \
 		-af "pan=mono|c0=c0,adelay=210|210" \
 		-c:a libmp3lame \
-		-qscale:a 5 \
+		-qscale:a 3 \
 		"/opptak/videoopptak_%F_%H:%M:%S.avi" \
 	-vf setsar=sar=1/1 \
 		-c:v libx264 \
