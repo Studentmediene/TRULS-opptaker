@@ -1,6 +1,6 @@
 #!/bin/bash
 # TODO: Take in rec dir and hours_to_keep from env vars
-(( hours_to_keep=7 ))
+(( hours_to_keep=24 ))
 (( minutes_to_keep=60*$hours_to_keep ))
 
 find /opptak \
