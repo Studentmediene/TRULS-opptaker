@@ -1,5 +1,9 @@
 #!/bin/bash
 # TODO: Take in rec dir++ from env vars
+set -o errexit
+set -o nounset
+set -o pipefail
+
 bmdcapture -m 6 -A 2 -V 4 -F nut -f pipe:1 | \
 ffmpeg -nostats -nostdin -y \
 	-i - \
