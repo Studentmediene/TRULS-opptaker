@@ -1,0 +1,8 @@
+[Unit]
+Description=Video-opptaker-bmd skriver hit, og -ffmpeg leser herfra.
+
+[Socket]
+User=opptaker
+ListenFIFO=/run/video
+SocketMode=0600
+RemoveOnStop=false

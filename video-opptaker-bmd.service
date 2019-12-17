@@ -1,0 +1,22 @@
+[Unit]
+Description=Service som tar imot video fra opptakskortet og sender det videre
+Requires=video-opptaker.socket
+After=video-opptaker.socket
+
+Wants=video-opptaker-ffmpeg.service
+
+[Service]
+User=opptaker
+
+Sockets=video-opptaker.socket
+
+StandardInput=null
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/local/bin/bmd.sh
+
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
