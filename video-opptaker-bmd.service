@@ -10,6 +10,9 @@ User=opptaker
 
 Sockets=video-opptaker.socket
 
+CPUAffinity= 7
+OOMScoreAdjust=-1000
+
 StandardInput=null
 StandardOutput=journal
 StandardError=journal
