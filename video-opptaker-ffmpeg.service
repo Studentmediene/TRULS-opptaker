@@ -1,14 +1,14 @@
 [Unit]
 Description=Service som tar imot video fra bmdcapture og lagrer det til disk
-Requires=video-opptaker.socket
-After=video-opptaker.socket
+Requires=video-opptaker-ffmpeg.socket
+After=video-opptaker-ffmpeg.socket
 
 [Service]
 User=opptaker
 
-Sockets=video-opptaker.socket
+Sockets=video-opptaker-ffmpeg.socket
 
-StandardInput=fd:video-opptaker.socket
+StandardInput=fd:video-opptaker-ffmpeg.socket
 StandardOutput=journal
 StandardError=journal
 ExecStart=/usr/local/bin/ffmpeg.sh

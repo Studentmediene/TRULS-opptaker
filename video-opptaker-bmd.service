@@ -1,14 +1,14 @@
 [Unit]
 Description=Service som tar imot video fra opptakskortet og sender det videre
-Requires=video-opptaker.socket
-After=video-opptaker.socket
+Requires=video-opptaker-ffmpeg.socket
+After=video-opptaker-ffmpeg.socket
 
 Wants=video-opptaker-ffmpeg.service
 
 [Service]
 User=opptaker
 
-Sockets=video-opptaker.socket
+Sockets=video-opptaker-ffmpeg.socket
 
 CPUAffinity= 7
 OOMScoreAdjust=-1
