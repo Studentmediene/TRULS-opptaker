@@ -1,5 +1,5 @@
 #!/bin/bash
-ffmpeg -nostats -nostdin -y \
+ffmpeg -nostats -nostdin -hwaccel cuvid -y \
 	-i - \
 	-vf setsar=sar=1/1 \
 		-f segment \
@@ -8,6 +8,7 @@ ffmpeg -nostats -nostdin -y \
 		-strftime 1 \
 		-reset_timestamps 1 \
 		-c:v mpeg4 \
+		-preset fast \
 		-vtag xvid \
 		-qscale:v 5 \
 		-af "pan=mono|c0=c0,adelay=210|210" \
