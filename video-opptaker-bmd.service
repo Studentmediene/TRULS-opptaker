@@ -11,7 +11,8 @@ User=opptaker
 Sockets=video-opptaker.socket
 
 CPUAffinity= 7
-OOMScoreAdjust=-1000
+OOMScoreAdjust=-1
+MemoryLimit=2G
 
 StandardInput=null
 StandardOutput=journal

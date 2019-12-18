@@ -13,7 +13,8 @@ StandardOutput=journal
 StandardError=journal
 ExecStart=/usr/local/bin/ffmpeg.sh
 
-OOMScoreAdjust=-999
+OOMScoreAdjust=-1
+MemoryLimit=1G
 
 Restart=always
 RestartSec=5s
